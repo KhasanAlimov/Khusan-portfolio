@@ -1,0 +1,25 @@
+// Font-face generator
+@mixin fontFace($name, $file, $weight: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("../fonts/#{$file}.ttf") format("truetype"),
+    url("../fonts/#{$file}.woff") format("woff"),
+    url("../fonts/#{$file}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: norml;
+    font-display: swap;
+  }
+}
+
+// Media
+@mixin screen($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  @else {
+    @error 'Не указано значение для `#{$breakpoint}`';
+  }
+}

@@ -1,0 +1,223 @@
+header {
+  background: linear-gradient(90deg, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+
+  .navigation {
+    font-family: 'Monsterrat_400', arial;
+    @media screen and (min-width: 350px){
+      padding: 0 25px;
+    }
+
+    & > .logo {
+      img {
+        @include screen('md') {
+          width: 120px !important;
+        }
+        @include screen('lg') {
+          width: 140px;
+        }
+      }
+    }
+
+    >* {
+      padding: 0;
+      width: max-content;
+    }
+
+    nav {
+
+      @include screen('md') {
+        flex: auto;
+        text-align: right;
+        padding: 0 15px 0 0;
+
+        .show-element {
+          display: block !important;
+
+        }
+        .slow-slide {
+          right: 0 !important;
+          left: 50% !important;
+        }
+      }
+      @include screen('xs') {
+        .slow-slide {
+          right: 0 !important;
+          left: 0 !important;
+        }
+      }
+
+      #menu-toggle-button {
+        @media screen and (min-width: 769px){
+          display: none;
+        }
+      }
+
+      #menu-toggle-button, #close-icon {
+        &>* {
+          cursor: pointer;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    // Nav items, collapse block
+    #collapse-block {
+      transition: all 0.5s ease;
+      @include screen('md') {
+        position: fixed;
+        top: 0;
+        right: -60%;
+        bottom: 0;
+        left: 110%;
+        background: #d6d7d9;
+        box-shadow: -2px 0 10px 1px #b7b7b7;
+      }
+
+      .nav {
+        @include screen('md') {
+          display: block !important;
+          text-align: center;
+        }
+
+        .nav-link,
+        #submenu-icon {
+          color: $dark;
+          cursor: pointer;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+
+        // Show submenu
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+          .dropDown {
+            position: relative;
+
+            &:hover {
+              #submenu {
+                position: absolute;
+                z-index: 100;
+                background: #e4e5e6;
+                display: block !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Language changer
+    .language-changer {
+
+      #lang {
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #3A3633;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .greeting {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 30px;
+    background: url('../img/Alimovs-bg-logo.svg') no-repeat center bottom;
+    background-size: auto 85%;
+
+    @include screen('md') {
+      background-size: contain !important;
+      background-position: top !important;
+    }
+
+    .title {
+      padding: 0 0 0 5%;
+
+      .name {
+        @include screen('md') {
+          padding-right: 15px;
+        }
+
+
+        h5, h1 > span:first-child {
+          color: $dark;
+          white-space: nowrap;
+        }
+
+        h5 {
+          font-family: 'Monsterrat_700', sans-serif;
+        }
+        h1 {
+          font-family: 'Monsterrat_800', sans-serif;
+        }
+
+        p {
+          font-family: 'Roboto_400', sans-serif;
+        }
+      }
+
+      .social-networks {
+        position: relative;
+        width: max-content;
+
+        p {
+          font-size: 14px;
+          color: $secondary-color;
+          margin: 0 0 5px 0;
+        }
+        #socNetIcons {
+          max-width: 185px;
+
+          & > * {
+            min-width: 20%;
+            height: 30px;
+
+            p {
+              background: $dark;
+              width: 30px;
+              height: 30px;
+              transition: all 0.3s ease;
+
+              a {
+                color: #d3d4d6;
+                font-size: 19px;
+              }
+            }
+
+            img {
+              height: 75%;
+            }
+          }
+        }
+
+        .chevron {
+          &-left {
+            left: -25px;
+            visibility: hidden;
+          }
+          &-right {
+            right: -20px;
+          }
+          &-left, &-right {
+            height: 24px;
+            font-size: 20px;
+            background: transparent;
+            bottom: 3px;
+
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .author-img {
+      place-self: flex-end;
+    }
+  }
+}

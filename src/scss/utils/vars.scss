@@ -1,0 +1,12 @@
+// Colors
+$secondary-color: #A09CAC;
+$dark: #3A3633;
+
+// Screens 
+$breakpoints: (
+'xxs': ('(max-width: 300px)'),
+'xs': ('(max-width: 450px)'),
+'sm': ('(max-width: 576px)'),
+'md': ('(max-width: 768px)'),
+'lg': ('(max-width: 992px)'),
+);

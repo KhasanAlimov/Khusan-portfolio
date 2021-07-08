@@ -1,0 +1,80 @@
+section#about-me {
+
+	.content {
+		.img {
+			p {
+				color: #3A36337a;
+			}
+		}
+		.text {
+			font-family: 'Roboto_400', arial;
+
+			p {
+				position: relative;
+				padding: 0 0 0 20px;
+
+				&::before {
+					content: '';
+					height: 90%;
+					border-left: solid 2px $secondary-color;
+					position: absolute;
+					top: 50%;
+					left: 0;
+    			transform: translate(0, -50%);
+				}
+			}
+		}
+	}
+}
+
+// My services section
+section#my-services {
+	.switcher {
+		font-family: 'Monsterrat_700', arial;
+
+		span {
+			cursor: pointer;
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+
+	#services-slider {
+		font-family: 'Roboto_400', arial;
+
+		.serviceBlock {
+	    display: grid;
+	    grid-template-columns: repeat(3, 50%);
+	    grid-template-rows: repeat(2, 200px);
+	    grid-gap: 2em;
+
+			.service {
+				background-size: 100% 100% !important;
+				border-radius: 15px;
+		    flex-wrap: wrap;
+		    align-content: center;
+
+				.headline {
+					font-family: 'Roboto_500', arial;
+				}
+				.headline, p {
+					position: relative;
+					z-index: 5;
+				}
+
+				.overlay {
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 0;
+					background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.3922) 0%, rgba(0, 0, 0, 0.5846) 100%);
+					border-radius: 15px;
+				}
+			}
+		}
+	}
+}
