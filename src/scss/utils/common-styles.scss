@@ -2,10 +2,6 @@
   width: 90%;
   max-width: 1400px;
   margin: auto;
-
-  @include screen('sm') {
-    padding: 0 4% 0 4%;
-  }
 }
 
 .overSiteBg {
@@ -17,12 +13,28 @@
   z-index: 100;
 }
 
+// Smooth slide 
 .slide-overflow {
   scroll-behavior: smooth;
   overflow-x: auto;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+// Chevron buttons
+.chevron {
+  &-left {
+    visibility: hidden;
+  }
+  &-left,
+  &-right {
+    background: transparent;
+
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }
 
@@ -37,12 +49,25 @@ button.btn-contact-me {
   }
 }
 
-
 // Main content
 section {
   margin-top: 90px !important;
 
-  .heading {
-    font-family: 'Monsterrat_700', arial;
+  .heading, &#my-services > #switcher, &#my-skills, &#portfolio {
+    font-family: "Monsterrat_700", arial;
   }
+}
+
+// Active element
+.active {
+  right: 0 !important;
+  visibility: visible !important;
+	opacity: 1 !important;
+}
+.slidedBlock {
+  right: 115% !important;
+}
+.active-part {
+  color: $secondary-color;
+  border-bottom: 2px $secondary-color solid;
 }

@@ -1,80 +1,185 @@
+main {
+  overflow: hidden;
+}
 section#about-me {
+  @include screen("sm") {
+    padding: 0 4% 0 4%;
+  }
 
-	.content {
-		.img {
-			p {
-				color: #3A36337a;
-			}
-		}
-		.text {
-			font-family: 'Roboto_400', arial;
+  .content {
+    .img {
+      p {
+        color: #3a36337a;
+      }
+    }
+    .text {
+      font-family: "Roboto_400", arial;
 
-			p {
-				position: relative;
-				padding: 0 0 0 20px;
+      p {
+        position: relative;
+        padding: 0 0 0 20px;
 
-				&::before {
-					content: '';
-					height: 90%;
-					border-left: solid 2px $secondary-color;
-					position: absolute;
-					top: 50%;
-					left: 0;
-    			transform: translate(0, -50%);
-				}
-			}
-		}
-	}
+        &::before {
+          content: "";
+          height: 90%;
+          border-left: solid 2px $secondary-color;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
 }
 
 // My services section
 section#my-services {
-	.switcher {
-		font-family: 'Monsterrat_700', arial;
+  #switcher {
+    span {
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-		span {
-			cursor: pointer;
-			transition: all 0.3s ease;
+      @include screen("md") {
+        font-size: 0.7em;
+        letter-spacing: -0.5px;
 
-			&:hover {
-				color: $secondary-color;
-			}
-		}
-	}
+        &:first-child {
+          margin: 0 2% 0 0 !important;
+        }
+        &:last-child {
+          margin: 0 0 0 2% !important;
+        }
+      }
 
-	#services-slider {
-		font-family: 'Roboto_400', arial;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
 
-		.serviceBlock {
-	    display: grid;
-	    grid-template-columns: repeat(3, 50%);
-	    grid-template-rows: repeat(2, 200px);
-	    grid-gap: 2em;
+  #services-slider {
+    font-family: "Roboto_400", arial;
+    height: 435px;
+    width: 98%;
+    margin: auto;
 
-			.service {
-				background-size: 100% 100% !important;
-				border-radius: 15px;
-		    flex-wrap: wrap;
-		    align-content: center;
+    @include screen("md") {
+      width: 90% !important;
+    }
 
-				.headline {
-					font-family: 'Roboto_500', arial;
-				}
-				.headline, p {
-					position: relative;
-					z-index: 5;
-				}
+    .serviceBlock {
+      display: grid;
+      grid-template-columns: repeat(3, 31.9%);
+      grid-template-rows: repeat(2, 200px);
+      grid-gap: 20px;
+      right: -115%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.7s ease;
+      overflow: hidden;
 
-				.overlay {
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					z-index: 0;
-					background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.3922) 0%, rgba(0, 0, 0, 0.5846) 100%);
-					border-radius: 15px;
-				}
-			}
-		}
-	}
+      @media (max-width: 1050px) {
+        grid-template-columns: repeat(3, 48%);
+      }
+
+      @include screen("md") {
+        grid-template-columns: repeat(3, 100%) !important;
+      }
+
+      .service {
+        background-size: cover !important;
+        border-radius: 15px;
+        flex-wrap: wrap;
+        align-content: center;
+
+        &:hover {
+          .overlay {
+            background: rgba(0, 0, 0, 0.582);
+          }
+        }
+
+        .headline {
+          font-family: "Roboto_500", arial;
+        }
+        .headline,
+        p {
+          position: relative;
+          z-index: 5;
+        }
+
+        .overlay {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(0, 0, 0, 0.3922) 0%,
+            rgba(0, 0, 0, 0.5846) 100%
+          );
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .chevron {
+      &-left {
+        left: -1em;
+      }
+      &-right {
+        right: -1em;
+      }
+      &-left,
+      &-right {
+        font-size: 2.5em;
+        height: max-content;
+        top: 49%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  .description {
+    font-family: "Roboto_400", arial;
+
+    .text {
+      width: 100%;
+      max-width: 650px;
+    }
+  }
 }
+
+// My skills section
+section#my-skills {
+  .skillBlock {
+    width: 48.5%;
+
+    @include screen('md') {
+      width: 100%;
+    }
+
+    .skill-type {
+      background: linear-gradient(90deg, #29323c 0%, #485563 100%);
+      border-radius: 15px;
+      padding: 1em 5%;
+
+      .img {
+        width: 35px;
+      }
+
+      .progress {
+        height: 5px;
+        .progress-bar {
+          background: #A09CAC;
+        }
+      }
+    }
+  }
+}
+
+// Portfolio
+// section#portfolio {
+
+// }

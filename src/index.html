@@ -1,162 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <title>Khusan Alimov</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-  <title>Khusan Alimov</title>
-</head>
+  <body>
+    <img
+      id="site-bg"
+      class="position-absolute w-100"
+      src="./assets/img/dekor.svg"
+      alt="dekor"
+    />
 
-<body>
-
-  <img id="site-bg" class="position-absolute w-100" src="./assets/img/dekor.svg" alt="dekor">
-
-  <!-- Header -->
-  <header class="pb-5">
-
-    <!-- Navigation -->
-    <div class="navigation max-w row justify-content-between align-items-center">
-      <div class="logo">
-        <img class="mt-2" src="./assets/img/alimovs-logo.svg" alt="alimovs logo" />
-      </div>
-
-      <!-- Menu -->
-      <nav>
-
-        <!-- Burger icon, open menu -->
-        <div id="menu-toggle-button">
-          <i class="bi bi-list fs-1"></i>
+    <!-- Header -->
+    <header class="pb-5">
+      <!-- Navigation -->
+      <div
+        class="navigation max-w row justify-content-between align-items-center"
+      >
+        <div class="logo">
+          <img
+            class="mt-2"
+            src="./assets/icons/alimovs-logo.svg"
+            alt="alimovs logo"
+          />
         </div>
 
-        <!-- List menu -->
-        <div id="collapse-block" class="d-none d-md-block">
-
-          <!-- X icon, close menu -->
-          <div id="close-icon" class="d-block d-md-none p-4">
-            <i class="bi bi-x-lg"></i>
+        <!-- Menu -->
+        <nav>
+          <!-- Burger icon, open menu -->
+          <div id="menu-toggle-button">
+            <i class="bi bi-list fs-1"></i>
           </div>
 
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a href="" class="nav-link">О себе</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Услуги</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Навыки</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Портфолио</a>
-            </li>
+          <!-- List menu -->
+          <div id="collapse-block" class="d-none d-md-block">
+            <!-- X icon, close menu -->
+            <div id="close-icon" class="d-block d-md-none p-4">
+              <i class="bi bi-x-lg"></i>
+            </div>
 
-            <li class="nav-item dropDown align-self-center">
-              <!-- Three dots icon, open submenu -->
-              <i id="submenu-icon" class="bi bi-three-dots d-none d-md-block d-lg-none fs-2"></i>
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a href="" class="nav-link">О себе</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Услуги</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Навыки</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Портфолио</a>
+              </li>
 
-              <!-- Drop down submenu -->
-              <ul id="submenu" class="nav d-md-none d-lg-flex">
-                <li class="nav-item">
-                  <a href="" class="nav-link">Отзывы</a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">Контакты</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+              <li class="nav-item dropDown align-self-center">
+                <!-- Three dots icon, open submenu -->
+                <i
+                  id="submenu-icon"
+                  class="bi bi-three-dots d-none d-md-block d-lg-none fs-2"
+                ></i>
+
+                <!-- Drop down submenu -->
+                <ul id="submenu" class="nav d-md-none d-lg-flex">
+                  <li class="nav-item">
+                    <a href="" class="nav-link">Отзывы</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">Контакты</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Languge changer -->
+        <div class="language-changer">
+          <select name="lang" id="lang">
+            <option value="ru" selected>ru</option>
+            <option value="en">en</option>
+          </select>
         </div>
-      </nav>
-
-      <!-- Languge changer -->
-      <div class="language-changer">
-        <select name="lang" id="lang">
-          <option value="ru" selected>ru</option>
-          <option value="en">en</option>
-        </select>
       </div>
-    </div>
 
-    <!-- Greeting -->
-    <div class="greeting row max-w justify-content-between mt-3 overSiteBg">
-      <div class="title col-md-5 d-flex flex-wrap">
-        <div class="name align-self-end col-12 mt-3">
-          <h5>Привет!</h5>
-          <h1>
-            <span>Меня зовут</span>
-            <br>
-            <span class="text-light">Хусан Алимов</span>
-          </h1>
-          <p class="pt-3">Смогу вам помочь с Веб & Графическим и с Версткой сайта, цель делать изящную, интеллигентную, утонченную — и при этом удобную во всех смыслах дизайн.</p>
-          <button class="border-0 rounded-pill px-4 py-2 text-light mt-3 btn-contact-me">Связатся со мной</button>
-        </div>
+      <!-- Greeting -->
+      <div class="greeting row max-w justify-content-between mt-3 overSiteBg">
+        <div class="title col-md-5 d-flex flex-wrap">
+          <div class="name align-self-end col-12 mt-3">
+            <h5>Привет!</h5>
+            <h1>
+              <span>Меня зовут</span>
+              <br />
+              <span class="text-light">Хусан Алимов</span>
+            </h1>
+            <p class="pt-3">
+              Смогу вам помочь с Веб & Графическим и с Версткой сайта, цель
+              делать изящную, интеллигентную, утонченную — и при этом удобную во
+              всех смыслах дизайн.
+            </p>
+            <button
+              class="
+                border-0
+                rounded-pill
+                px-4
+                py-2
+                text-light
+                mt-3
+                btn-contact-me
+              "
+            >
+              Связатся со мной
+            </button>
+          </div>
 
-        <div class="social-networks align-self-end col-12 mt-3 mb-2">
-          <p>Следить за мной</p>
-          <div id="socNetIcons" class="d-flex slide-overflow">
-            
+          <div class="social-networks align-self-end col-12 mt-3 mb-2">
+            <p>Следить за мной</p>
+            <div id="socNetIcons" class="d-flex slide-overflow"></div>
           </div>
         </div>
-      </div>
 
-      <!-- Author header image -->
-      <div class="author-img col-md-7 p-0">
-        <img class="w-100" src="assets/img/author-top-img.png" alt="алимов хусан">
-      </div>
-    </div>
-  </header>
-
-  <!-- Content -->
-  <main>
-
-    <!-- About me -->
-    <section id="about-me" class="max-w overSiteBg">
-      <div class="heading mb-5">
-        <h2 class="text-center">О себе</h2>
-      </div>
-
-      <div class="content row">
-        <div class="img col-md-5 p-0 align-self-center text-center mb-3">
-          <img src="assets/img/AlimovKhusan2.png" alt="Alimov Khusan" class="w-100">
-          <p class="mb-1">Мой девиз Улыбка —</p>
-          <p class="m-0">Улыбайся культурно и с уважением</p>
-        </div>
-        <div class="text col-md-7 p-0">
-          <p>Каждый может использовать свои способности, чтобы помогать другим людям. Здравствуйте! Меня зовут Хусан Алимов, мне 20 лет, родился в Кыргызстане в городе Ош.</p>
-
-          <p>Мои способности заключаются в том что я умею пользоватся кой-какими программами и владею кой-какими програмными языками и мог бы круто выручить вас с Графическим и Веб-дизайном включая Верстку сайта. Внесение удивительных изменений в жизнь одного человека может изменить мир.</p>
-
-          <p>Стараюсь мыслить глобально, действовать локально и полностью погрузится в работу. Мир всегда меняется. Что не может изменится, так это наше стремление к совершенствованию, наше стремление делать лучше. </p>
-
-          <p>Я жил, учился и рос в странах таких как Россия и Украина, сейчас живу в Кыргызстане. Окончил колледж в ОшГУ «Ош Государственный Университет», факультет Математика информационных технологий, не стал продолжать учебу, перешел на самообучение, так развиваться быстрее.</p>
-
-          <p>Представьте какой дизайн можно сделать из тщательно обработанной идеи и представьте какие эмоции будут у ваших знакомых увидев эту картину. Да! Было бы здорово не так ли. Если вы ищете человека который смог бы вам помочь с этим, так позвольте мне помочь вам. Чего вы ждете свяжитесь со мной. Я уверен мы найдем общий язык.</p>
-
-          <button class="border-0 rounded-pill px-4 py-2 text-light mt-3 btn-contact-me">Связатся со мной</button>
+        <!-- Author header image -->
+        <div class="author-img col-md-7 p-0">
+          <img
+            class="w-100"
+            src="assets/img/author-top-img.png"
+            alt="алимов хусан"
+          />
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- Services -->
-    <section id="my-services" class="max-w overSiteBg">
-      <div class="heading">
-        <h2 class="text-center">Мои услуги</h2>
-      </div>
+    <!-- Content -->
+    <main>
+      <!-- About me -->
+      <section id="about-me" class="max-w overSiteBg">
+        <div class="heading mb-5">
+          <h2 class="text-center">О себе</h2>
+        </div>
 
-      <div class="switcher text-center fs-5 my-4">
-        <span class="mx-3">Графический дизайн</span>
-        <span class="mx-3">Веб-дизайн и верстка</span>
-      </div>
-      <div id="services-slider">
-        
-      </div>
-    </section>
-  </main>
-  <footer></footer>
-</body>
-<!-- <script>
+        <div class="content row">
+          <div class="img col-md-5 p-0 align-self-center text-center mb-3">
+            <img
+              src="assets/img/AlimovKhusan2.png"
+              alt="Alimov Khusan"
+              class="w-100"
+            />
+            <p class="mb-1">Мой девиз Улыбка —</p>
+            <p class="m-0">Улыбайся культурно и с уважением</p>
+          </div>
+          <div class="text col-md-7 p-0">
+            <p>
+              Каждый может использовать свои способности, чтобы помогать другим
+              людям. Здравствуйте! Меня зовут Хусан Алимов, мне 20 лет, родился
+              в Кыргызстане в городе Ош.
+            </p>
+
+            <p>
+              Мои способности заключаются в том что я умею пользоватся
+              кой-какими программами и владею кой-какими програмными языками и
+              мог бы круто выручить вас с Графическим и Веб-дизайном включая
+              Верстку сайта. Внесение удивительных изменений в жизнь одного
+              человека может изменить мир.
+            </p>
+
+            <p>
+              Стараюсь мыслить глобально, действовать локально и полностью
+              погрузится в работу. Мир всегда меняется. Что не может изменится,
+              так это наше стремление к совершенствованию, наше стремление
+              делать лучше.
+            </p>
+
+            <p>
+              Я жил, учился и рос в странах таких как Россия и Украина, сейчас
+              живу в Кыргызстане. Окончил колледж в ОшГУ «Ош Государственный
+              Университет», факультет Математика информационных технологий, не
+              стал продолжать учебу, перешел на самообучение, так развиваться
+              быстрее.
+            </p>
+
+            <p>
+              Представьте какой дизайн можно сделать из тщательно обработанной
+              идеи и представьте какие эмоции будут у ваших знакомых увидев эту
+              картину. Да! Было бы здорово не так ли. Если вы ищете человека
+              который смог бы вам помочь с этим, так позвольте мне помочь вам.
+              Чего вы ждете свяжитесь со мной. Я уверен мы найдем общий язык.
+            </p>
+
+            <button
+              class="
+                border-0
+                rounded-pill
+                px-4
+                py-2
+                text-light
+                mt-3
+                btn-contact-me
+              "
+            >
+              Связатся со мной
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="my-services" class="max-w overSiteBg">
+        <div class="heading">
+          <h2 class="text-center">Мои услуги</h2>
+        </div>
+
+        <div id="switcher" class="text-center fs-5 my-4">
+          <span class="slide-name me-3 active-part" slide-index="0"
+            >Графический дизайн</span
+          >
+          <span class="slide-name ms-3" slide-index="1"
+            >Веб-дизайн и верстка</span
+          >
+        </div>
+
+        <!-- Services slider container -->
+        <div id="services-slider" class="position-relative"></div>
+
+        <!-- Description -->
+        <div class="description text-center py-3">
+          <p class="text mx-auto mt-4">
+            Не могу сказать что я идеальный, но я могу делать то, что может
+            мобилизовать, привлечь внимание и побудить людей.
+          </p>
+          <button
+            class="border-0 rounded-pill px-4 py-2 text-light btn-contact-me"
+          >
+            Связатся со мной
+          </button>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="my-skills" class="max-w overSiteBg">
+        <div class="heading mb-3">
+          <h2 class="text-center">Мои навыки</h2>
+        </div>
+
+        <div id="skills-container" class="row justify-content-between">
+
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="max-w overSiteBg">
+        <div class="heading mb-3">
+          <h2 class="text-center">Портфолио</h2>
+        </div>
+
+        <div id="portfolio-sliders-container">
+          
+        </div>
+
+        <div class="portfolio-slider-container">
+          <h4>Графический дизайн</h4>
+        </div>
+
+        <div class="portfolio-slider-container">
+          <h4>Веб-дизайн</h4>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <!-- <script>
     let h = document.body.clientHeight;
     let siteBgImg = document.querySelector('#site-bg');
 

@@ -1,10 +1,13 @@
-@import './utils/vars.scss';
-@import './utils/mixins.scss';
-@import './utils/font-face.scss';
-@import './utils/common-styles.scss';
-@import './components/header.scss';
-@import './components/content.scss';
+@import "./utils/vars.scss";
+@import "./utils/mixins.scss";
+@import "./utils/font-face.scss";
+@import "./utils/common-styles.scss";
+@import "./components/header.scss";
+@import "./components/content.scss";
 
+body {
+  font-family: arial;
+}
 #site-bg {
-	z-index: 5;
+  z-index: 5;
 }
