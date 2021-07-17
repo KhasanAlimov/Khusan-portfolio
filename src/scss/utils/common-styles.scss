@@ -24,10 +24,13 @@
 }
 
 // Chevron buttons
-.chevron {
-  &-left {
-    visibility: hidden;
+header, section#my-services  {
+  .chevron-left {
+      visibility: hidden;
   }
+}
+
+.chevron {
   &-left,
   &-right {
     background: transparent;
@@ -37,6 +40,25 @@
     }
   }
 }
+
+section#my-services, section#portfolio {
+  .chevron {
+    &-left {
+      left: -1em;
+    }
+    &-right {
+      right: -1em;
+    }
+    &-left,
+    &-right {
+      font-size: 2.5em;
+      height: max-content;
+      top: 49%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
 
 // contact me button
 button.btn-contact-me {

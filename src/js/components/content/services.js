@@ -120,7 +120,7 @@ servicesObject.map((item) => {
         "className",
         "service p-3  position-relative text-center text-white d-flex justify-content-center",
       ],
-      ["style.background", `url('./assets/img/${serv.img.name}') no-repeat`],
+      ["style.background", `url('./assets/img/services/${serv.img.name}') no-repeat`],
       [
         "innerHTML",
         `
