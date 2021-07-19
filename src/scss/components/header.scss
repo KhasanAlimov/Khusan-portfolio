@@ -168,48 +168,13 @@ header {
           margin: 0 0 5px 0;
         }
         #socNetIcons {
-          max-width: 185px;
-
           & > * {
-            min-width: 20%;
-            height: 30px;
-
             p {
               background: $dark;
-              width: 30px;
-              height: 30px;
-              transition: all 0.3s ease;
-              align-items: center;
-
-              a {
-                color: #d3d4d6;
-                font-size: 19px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -45%);
-              }
             }
-
-            img {
-              width: 20px;
-              transform: translate(0px, -2px);
+            a {
+              color: #d3d4d6;
             }
-          }
-        }
-
-        .chevron {
-          &-left {
-            left: -25px;
-          }
-          &-right {
-            right: -20px;
-          }
-          &-left,
-          &-right {
-            height: 24px;
-            font-size: 20px;
-            bottom: 3px;
           }
         }
       }

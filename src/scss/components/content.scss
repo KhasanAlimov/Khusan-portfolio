@@ -235,3 +235,112 @@ section#portfolio {
     font-family: "Roboto_400", arial;
   }
 }
+
+section#contactsReviews {
+  background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+
+  #reviews {
+    .cardOfReviews {
+      flex-wrap: wrap;
+      .reviewCard {
+        border-radius: 15px;
+        width: 31.5%;
+
+        @include screen('md') {
+          &:not(:last-child) {
+            width: 47%;
+          }
+          &:last-child {
+            width: 100%;
+          }
+        }
+        @include screen('sm') {
+            width: 100% !important;
+        }
+
+        .avatar {
+          width: 50px;
+          height: 50px;
+        }
+        .headline {
+          width: 150px;
+          height: 11px;
+        }
+        .stars {
+          width: max-content;
+          font-size: 12px;
+        } .column {
+          height: 5px;
+        }
+        .bg-lightGray {
+          background: #C4C4C4;
+        }
+        .txt-lightGray {
+          color: #C4C4C4;
+        }
+      }
+    }
+
+    .description {
+      max-width: 600px;
+      font-family: "Roboto_400", arial;
+    }
+  }
+
+  #contacts {
+    margin-top: 80px;
+
+    .contact-form {
+      font-family: "Roboto_400", arial;
+
+      input, textarea {
+        outline: none;
+        border-radius: 15px;
+
+        &::placeholder {
+          color: #000000, 26%;
+          font-size: 14px;
+        }
+      }
+      .textarea {
+        resize: none;
+      }
+      .submit-form {
+        width: 160px;
+      }
+
+      .dop-info {
+        & > * {
+          p {
+            font-size: 14px;
+          }
+
+          h5 {
+            font-family: "Roboto_700", arial;
+          }
+        }
+
+        .soc-net {
+          width: max-content;
+
+          #socNetIcons {
+            img {
+              filter: invert(0.9);
+
+              &:hover {
+                filter: invert(0);
+              }
+            }
+          }
+
+          .chevron {
+            &-left,
+            &-right {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

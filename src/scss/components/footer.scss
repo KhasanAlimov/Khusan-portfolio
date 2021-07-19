@@ -1,0 +1,49 @@
+footer {
+  background: linear-gradient(274.93deg, #2c2c2c 0%, #000000 100%);
+
+  .footer-social {
+		@include screen('md') {
+			text-align: center;
+		}
+    #socNetIcons {
+			@include screen('md') {
+				margin: auto !important;
+			}
+
+			& > * {
+				min-width: 25%;
+				margin: 7px 0;
+
+				@include screen('md') {
+					p {
+						margin: auto !important;
+					}
+				}
+			}
+
+			img {
+				filter: invert(0.9);
+
+				&:hover {
+					filter: invert(0);
+				}
+			}
+    }
+  }
+
+	nav ul a {
+		color: #ffffff !important;
+	}
+
+	.to-top {
+		button {
+			width: 50px;
+			height: 48px;
+			background: rgba(140, 140, 140, 0.5);
+		}
+
+		@include screen('md') {
+			text-align: center !important;
+		}
+	}
+}

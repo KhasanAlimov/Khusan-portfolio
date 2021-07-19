@@ -1,4 +1,4 @@
-import { addElem, elem, capitalizeFirstLetter } from "./utils.js";
+import { addElem, elem, capitalizeFirstLetter, elems } from "./utils.js";
 
 // Open menu list
 const burgerMenuIcon = elem("#menu-toggle-button").children[0],
@@ -25,55 +25,58 @@ XIcon.addEventListener("click", () => {
 const appsIcons = [
   {
     name: "instagram",
-    link: "bi bi-instagram",
+    link: "https://www.instagram.com/khsalimovs/",
     color: "#DD2A7B",
   },
   {
     name: "facebook",
-    link: "bi bi-facebook",
+    link: "https://www.facebook.com/khsalimovs",
     color: "#3b5998",
   },
   {
     name: "twitter",
-    link: "bi bi-twitter",
+    link: "https://twitter.com/KhusanAlimov",
     color: "#1DA1F2",
   },
   {
     name: "vkontakte",
     img: true,
-    link: "",
+    link: "https://vk.com/khusanalimov",
     color: "#45668e",
   },
   {
     name: "telegram",
-    link: "bi bi-telegram",
+    link: "https://t.me/KhusanAlimov",
     color: "#0088cc",
   },
   {
     name: "whatsapp",
-    link: "bi bi-whatsapp",
+    link: "https://wa.me/996700594283",
     color: "#25D366",
   },
   {
     name: "behance",
     img: true,
-    link: "",
+    link: "https://www.behance.net/husanalimov",
     color: "#c836c8",
   },
   {
     name: "skype",
-    link: "bi bi-skype",
+    link: "https://join.skype.com/invite/OqZNHd5WRYHX",
     color: "#00aff0",
   },
 ];
 
-const socNet = elem("#socNetIcons");
+const socNet = elems("#socNetIcons");
 
 let iconsBlock;
 
+socNet.forEach(socItem => {
+  
+
 // Итерация соц сетей
 appsIcons.map((item) => {
-  iconsBlock = addElem(socNet, "div", [["className", "iconsBlock"]]);
+  iconsBlock = addElem(socItem, "div", [["className", "iconsBlock"]]);
 
   // Проверка изображений и svg иконок
   const iconShow = () => {
@@ -95,7 +98,7 @@ appsIcons.map((item) => {
     } rounded-circle m-0 position-relative" title="${capitalizeFirstLetter(
     item.name
   )}">
-			<a href="#" target="_blank">
+			<a href="${item.link}" target="_blank">
 				${iconShow()}
 			</a>
 		</p>
@@ -116,7 +119,7 @@ appsIcons.map((item) => {
 const controls = ["chevron-left", "chevron-right"];
 
 controls.map((item) => {
-  const addButton = addElem(socNet.parentElement, "button", [
+  const addButton = addElem(socItem.parentElement, "button", [
     ["className", `${item} position-absolute p-0 border-0`],
     ["innerHTML", `<i class="bi bi-${item}"></i>`],
   ]);
@@ -124,25 +127,26 @@ controls.map((item) => {
   let currentScrollValue;
   addButton.addEventListener("click", () => {
     addButton.classList.contains("chevron-left")
-      ? (currentScrollValue = socNet.scrollLeft -= 37)
-      : (currentScrollValue = socNet.scrollLeft += 37);
+      ? (currentScrollValue = socItem.scrollLeft -= 37)
+      : (currentScrollValue = socItem.scrollLeft += 37);
 
     showHideControl(currentScrollValue);
   });
 });
 
 // On scroll hide control
-socNet.addEventListener("scroll", () => showHideControl(socNet.scrollLeft));
+socItem.addEventListener("scroll", () => showHideControl(socItem.scrollLeft));
 
 // Show and hide control
 const showHideControl = (scrollValue) => {
-  const chevronLeft = socNet.parentElement.querySelector(".chevron-left");
-  const chevronRight = socNet.parentElement.querySelector(".chevron-right");
+  const chevronLeft = socItem.parentElement.querySelector(".chevron-left");
+  const chevronRight = socItem.parentElement.querySelector(".chevron-right");
 
-  scrollValue >= socNet.scrollWidth - socNet.clientWidth
+  scrollValue >= socItem.scrollWidth - socItem.clientWidth
     ? (chevronRight.style.visibility = "hidden")
     : scrollValue <= 0
     ? (chevronLeft.style.visibility = "hidden")
     : ((chevronRight.style.visibility = "visible"),
       (chevronLeft.style.visibility = "visible"));
 };
+});

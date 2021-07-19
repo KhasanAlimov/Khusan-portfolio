@@ -14,6 +14,7 @@
       class="position-absolute w-100"
       src="./assets/img/dekor.svg"
       alt="dekor"
+      style="max-height: 5400px;"
     />
 
     <!-- Header -->
@@ -46,16 +47,16 @@
 
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <a href="" class="nav-link">О себе</a>
+                <a href="#about-me" class="nav-link">О себе</a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">Услуги</a>
+                <a href="#my-services" class="nav-link">Услуги</a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">Навыки</a>
+                <a href="#my-skills" class="nav-link">Навыки</a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">Портфолио</a>
+                <a href="#portfolio" class="nav-link">Портфолио</a>
               </li>
 
               <li class="nav-item dropDown align-self-center">
@@ -68,10 +69,10 @@
                 <!-- Drop down submenu -->
                 <ul id="submenu" class="nav d-md-none d-lg-flex">
                   <li class="nav-item">
-                    <a href="" class="nav-link">Отзывы</a>
+                    <a href="#reviews" class="nav-link">Отзывы</a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">Контакты</a>
+                    <a href="#contacts" class="nav-link">Контакты</a>
                   </li>
                 </ul>
               </li>
@@ -272,29 +273,174 @@
           </p>
 
           <button
-              class="
-                border-0
-                rounded-pill
-                px-4
-                py-2
-                text-light
-                mt-3
-                btn-contact-me
-              "
-            >
-              Связатся со мной
-            </button>
+            class="
+              border-0
+              rounded-pill
+              px-4
+              py-2
+              text-light
+              mt-3
+              btn-contact-me
+            "
+          >
+            Связатся со мной
+          </button>
+        </div>
+      </section>
+
+      <!-- Reviews and Contacts -->
+      <section id="contactsReviews" class="text-light py-5">
+        <!-- Reviews -->
+        <div id="reviews" class="max-w overSiteBg">
+          <div class="heading">
+            <h2 class="text-center">Отзывы обо мне</h2>
+          </div>
+
+          <div class="cardOfReviews d-flex justify-content-between my-4"></div>
+
+          <div class="description text-center mx-auto">
+            <p>
+              Эта категория пуста, так как у меня еще нету отзывов обо мне.
+              Надеюсь на то что за ближайшее время заполню эту категорию
+            </p>
+          </div>
+        </div>
+
+        <!-- Contacts -->
+        <div id="contacts" class="max-w overSiteBg">
+          <div class="heading">
+            <h2 class="text-center">Контакты</h2>
+          </div>
+
+          <div class="contact-form row justify-content-between">
+            <form action="" class="d-grid gap-3 col-md-6 my-4">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Имя"
+                class="my-1 p-2 border-0"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                class="my-1 p-2 border-0"
+                required
+              />
+              <textarea
+                name="text"
+                id="text"
+                cols="30"
+                rows="4"
+                placeholder="Чем могу помочь"
+                class="my-1 p-2 border-0"
+                required
+              ></textarea>
+              <div class="text-end">
+                <button
+                  type="submit"
+                  class="
+                    border-0
+                    rounded-pill
+                    px-4
+                    py-2
+                    text-light
+                    btn-contact-me
+                    submit-form
+                  "
+                >
+                  Отправить
+                </button>
+              </div>
+            </form>
+
+            <div class="dop-info col-md-5 my-4">
+              <div class="name">
+                <p class="m-0 text-secondary">Мое имя</p>
+                <h5>Хусан</h5>
+              </div>
+              <div class="tel mt-3">
+                <p class="m-0 text-secondary">Мой номер</p>
+                <h5>
+                  <a
+                    href="tel:+996700594283"
+                    class="text-light text-decoration-none"
+                    >+996700594283</a
+                  >
+                </h5>
+              </div>
+              <div class="email mt-3">
+                <p class="m-0 text-secondary">E-mail</p>
+                <h5>
+                  <a
+                    href="mailto:husanalimov2@gmail.com"
+                    class="text-light text-decoration-none"
+                    >husanalimov2@gmail.com</a
+                  >
+                </h5>
+              </div>
+              <div class="soc-net position-relative">
+                <p class="mb-1 text-secondary">Или свяжитесь через</p>
+
+                <div id="socNetIcons" class="d-flex slide-overflow"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+
+    <!-- Footer -->
+    <footer class="py-4">
+      <div class="max-w overSiteBg row justify-content-between align-items-center">
+
+        <!-- Social -->
+        <div class="footer-social col-md-3  my-3">
+          <p class="m-0 text-secondary">Следить за мной</p>
+          <div id="socNetIcons" class="d-flex flex-wrap"></div>
+        </div>
+
+        <div class="navigation text-light col-md-6 text-center my-3">
+          <div class="avatar">
+            <img class="rounded-circle mb-2" src="./assets/img/avatar.jpg" alt="Alimovs avatar">
+            <h4>Хусан Алимов</h4>
+          </div>
+
+          <!-- Navigation -->
+          <nav>
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a href="#about-me" class="nav-link">О себе</a>
+              </li>
+              <li class="nav-item">
+                <a href="#my-services" class="nav-link">Услуги</a>
+              </li>
+              <li class="nav-item">
+                <a href="#my-skills" class="nav-link">Навыки</a>
+              </li>
+              <li class="nav-item">
+                <a href="#portfolio" class="nav-link">Портфолио</a>
+              </li>
+              <li class="nav-item">
+                <a href="#reviews" class="nav-link">Отзывы</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contacts" class="nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- To top button -->
+        <div class="to-top col-md-3 text-end my-3">
+          <button id="to-top-btn" class="border-0 fs-3 lh-1 p-0 rounded-circle">
+            <i class="bi bi-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
   </body>
-  <!-- <script>
-    let h = document.body.clientHeight;
-    let siteBgImg = document.querySelector('#site-bg');
-
-    console.log(h);
-
-    siteBgImg.style.height = h + 'px';
-  </script> -->
 </html>
