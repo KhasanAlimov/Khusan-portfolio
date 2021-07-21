@@ -3,6 +3,7 @@ import { addElem, elem, elems } from "../utils.js";
 const skilsObj = [
   {
     title: "Дизайн",
+	langAttr: 'skillDesign',
     skills: [
       {
         Icon: "figma.svg",
@@ -33,6 +34,7 @@ const skilsObj = [
   },
 	{
     title: "Верстка",
+	langAttr: 'layout',
     skills: [
       {
         Icon: "html5-icon.svg",
@@ -69,7 +71,7 @@ skilsObj.map(item => {
 	const skillBlock = addElem(skillsContainer, 'div', [
 		['className', 'skillBlock p-0'],
 		['innerHTML', `
-			<h4 class="text-center my-4">${item.title}</h4>
+			<h4 class="text-center my-4" lang-key="${item.langAttr}">${item.title}</h4>
 		`]
 	]);
 

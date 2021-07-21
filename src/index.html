@@ -14,7 +14,7 @@
       class="position-absolute w-100"
       src="./assets/img/dekor.svg"
       alt="dekor"
-      style="max-height: 5400px;"
+      style="max-height: 5400px"
     />
 
     <!-- Header -->
@@ -47,16 +47,16 @@
 
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <a href="#about-me" class="nav-link">О себе</a>
+                <a href="#about-me" class="nav-link" lang-key="navAboutMe">О себе</a>
               </li>
               <li class="nav-item">
-                <a href="#my-services" class="nav-link">Услуги</a>
+                <a href="#my-services" class="nav-link" lang-key="navServices">Услуги</a>
               </li>
               <li class="nav-item">
-                <a href="#my-skills" class="nav-link">Навыки</a>
+                <a href="#my-skills" class="nav-link" lang-key="navSkills">Навыки</a>
               </li>
               <li class="nav-item">
-                <a href="#portfolio" class="nav-link">Портфолио</a>
+                <a href="#portfolio" class="nav-link" lang-key="navPortfolio">Портфолио</a>
               </li>
 
               <li class="nav-item dropDown align-self-center">
@@ -69,10 +69,10 @@
                 <!-- Drop down submenu -->
                 <ul id="submenu" class="nav d-md-none d-lg-flex">
                   <li class="nav-item">
-                    <a href="#reviews" class="nav-link">Отзывы</a>
+                    <a href="#reviews" class="nav-link" lang-key="navTestimonials">Отзывы</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#contacts" class="nav-link">Контакты</a>
+                    <a href="#contacts" class="nav-link" lang-key="navContacts">Контакты</a>
                   </li>
                 </ul>
               </li>
@@ -93,34 +93,37 @@
       <div class="greeting row max-w justify-content-between mt-3 overSiteBg">
         <div class="title col-md-5 d-flex flex-wrap">
           <div class="name align-self-end col-12 mt-3">
-            <h5>Привет!</h5>
+            <h5 lang-key="hello">Привет!</h5>
             <h1>
-              <span>Меня зовут</span>
+              <span lang-key="nameIs">Меня зовут</span>
               <br />
-              <span class="text-light">Хусан Алимов</span>
+              <span class="text-light" lang-key="authorName">Хусан Алимов</span>
             </h1>
-            <p class="pt-3">
+            <p class="pt-3" lang-key="headerBriefInfo">
               Смогу вам помочь с Веб & Графическим и с Версткой сайта, цель
               делать изящную, интеллигентную, утонченную — и при этом удобную во
               всех смыслах дизайн.
             </p>
-            <button
-              class="
-                border-0
-                rounded-pill
-                px-4
-                py-2
-                text-light
-                mt-3
-                btn-contact-me
-              "
-            >
-              Связатся со мной
-            </button>
+            <a href="#contacts">
+              <button
+                class="
+                  border-0
+                  rounded-pill
+                  px-4
+                  py-2
+                  text-light
+                  mt-3
+                  btn-contact-me
+                "
+                lang-key="contactMe"
+              >
+                Связатся со мной
+              </button>
+            </a>
           </div>
 
           <div class="social-networks align-self-end col-12 mt-3 mb-2">
-            <p>Следить за мной</p>
+            <p lang-key="FollowMe">Следить за мной</p>
             <div id="socNetIcons" class="d-flex slide-overflow"></div>
           </div>
         </div>
@@ -141,7 +144,7 @@
       <!-- About me -->
       <section id="about-me" class="max-w overSiteBg">
         <div class="heading mb-5">
-          <h2 class="text-center">О себе</h2>
+          <h2 class="text-center" lang-key="navAboutMe">О себе</h2>
         </div>
 
         <div class="content row">
@@ -151,17 +154,17 @@
               alt="Alimov Khusan"
               class="w-100"
             />
-            <p class="mb-1">Мой девиз Улыбка —</p>
-            <p class="m-0">Улыбайся культурно и с уважением</p>
+            <p class="mb-1" lang-key="mottoIs">Мой девиз Улыбка —</p>
+            <p class="m-0" lang-key="mottoContinuation">Улыбайся культурно и с уважением</p>
           </div>
           <div class="text col-md-7 p-0">
-            <p>
+            <p lang-key="aboutMeP1">
               Каждый может использовать свои способности, чтобы помогать другим
               людям. Здравствуйте! Меня зовут Хусан Алимов, мне 20 лет, родился
               в Кыргызстане в городе Ош.
             </p>
 
-            <p>
+            <p lang-key="aboutMeP2">
               Мои способности заключаются в том что я умею пользоватся
               кой-какими программами и владею кой-какими програмными языками и
               мог бы круто выручить вас с Графическим и Веб-дизайном включая
@@ -169,14 +172,14 @@
               человека может изменить мир.
             </p>
 
-            <p>
+            <p lang-key="aboutMeP3">
               Стараюсь мыслить глобально, действовать локально и полностью
               погрузится в работу. Мир всегда меняется. Что не может изменится,
               так это наше стремление к совершенствованию, наше стремление
               делать лучше.
             </p>
 
-            <p>
+            <p lang-key="aboutMeP4">
               Я жил, учился и рос в странах таких как Россия и Украина, сейчас
               живу в Кыргызстане. Окончил колледж в ОшГУ «Ош Государственный
               Университет», факультет Математика информационных технологий, не
@@ -184,14 +187,96 @@
               быстрее.
             </p>
 
-            <p>
+            <p lang-key="aboutMeP5">
               Представьте какой дизайн можно сделать из тщательно обработанной
               идеи и представьте какие эмоции будут у ваших знакомых увидев эту
               картину. Да! Было бы здорово не так ли. Если вы ищете человека
               который смог бы вам помочь с этим, так позвольте мне помочь вам.
               Чего вы ждете свяжитесь со мной. Я уверен мы найдем общий язык.
             </p>
+            <a href="#contacts">
+              <button
+                class="
+                  border-0
+                  rounded-pill
+                  px-4
+                  py-2
+                  text-light
+                  mt-3
+                  btn-contact-me
+                "
+                lang-key="contactMe"
+              >
+                Связатся со мной
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
 
+      <!-- Services -->
+      <section id="my-services" class="max-w overSiteBg">
+        <div class="heading">
+          <h2 class="text-center" lang-key="servicesHeadline">Мои услуги</h2>
+        </div>
+
+        <div id="switcher" class="text-center fs-5 my-4">
+          <span class="slide-name me-3 active-part" slide-index="0"
+          lang-key="graphDesign">Графический дизайн</span>
+          <span class="slide-name ms-3" slide-index="1"
+          lang-key="webDesign">Веб-дизайн и верстка</span>
+        </div>
+
+        <!-- Services slider container -->
+        <div id="services-slider" class="position-relative"></div>
+
+        <!-- Description -->
+        <div class="description text-center py-3">
+          <p class="text mx-auto mt-4" lang-key="servicesDescrip">
+            Не могу сказать что я идеальный, но я могу делать то, что может
+            мобилизовать, привлечь внимание и побудить людей.
+          </p>
+          <a href="#contacts">
+            <button
+              class="border-0 rounded-pill px-4 py-2 text-light btn-contact-me"
+              lang-key="contactMe">
+              Связатся со мной
+            </button>
+          </a>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="my-skills" class="max-w overSiteBg">
+        <div class="heading mb-3">
+          <h2 class="text-center" lang-key="skillsHeadline">Мои навыки</h2>
+        </div>
+
+        <div id="skills-container" class="row justify-content-between"></div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="max-w overSiteBg">
+        <div class="heading mb-3">
+          <h2 class="text-center" lang-key="navPortfolio">Портфолио</h2>
+        </div>
+
+        <div id="portfolio-sliders-container"></div>
+
+        <div class="description text-center mx-auto mt-5 pb-3">
+          <p lang-key="portfolioDescP1">
+            Может ли созданный человеком дизайн общаться с человеческим
+            сознанием? После того как появилась сфера дизайна, люди начали
+            верить и стали думать иначе, что между творчеством и людьми
+            существует более глубокая духовная связь.
+          </p>
+          <p lang-key="portfolioDescP2">
+            Представьте каким был дизайн 5 или 10 лет назад, только сравнив
+            на сегодняшний день можно понять что человечество очень быстро
+            эволюционировало, и так можно понять что дело не в красоте,
+            а в удобном, понятном и приятным на глаз дизайне.
+          </p>
+          <a href="#contacts">
             <button
               class="
                 border-0
@@ -202,89 +287,11 @@
                 mt-3
                 btn-contact-me
               "
+              lang-key="contactMe"
             >
               Связатся со мной
             </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services -->
-      <section id="my-services" class="max-w overSiteBg">
-        <div class="heading">
-          <h2 class="text-center">Мои услуги</h2>
-        </div>
-
-        <div id="switcher" class="text-center fs-5 my-4">
-          <span class="slide-name me-3 active-part" slide-index="0"
-            >Графический дизайн</span
-          >
-          <span class="slide-name ms-3" slide-index="1"
-            >Веб-дизайн и верстка</span
-          >
-        </div>
-
-        <!-- Services slider container -->
-        <div id="services-slider" class="position-relative"></div>
-
-        <!-- Description -->
-        <div class="description text-center py-3">
-          <p class="text mx-auto mt-4">
-            Не могу сказать что я идеальный, но я могу делать то, что может
-            мобилизовать, привлечь внимание и побудить людей.
-          </p>
-          <button
-            class="border-0 rounded-pill px-4 py-2 text-light btn-contact-me"
-          >
-            Связатся со мной
-          </button>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section id="my-skills" class="max-w overSiteBg">
-        <div class="heading mb-3">
-          <h2 class="text-center">Мои навыки</h2>
-        </div>
-
-        <div id="skills-container" class="row justify-content-between"></div>
-      </section>
-
-      <!-- Portfolio -->
-      <section id="portfolio" class="max-w overSiteBg">
-        <div class="heading mb-3">
-          <h2 class="text-center">Портфолио</h2>
-        </div>
-
-        <div id="portfolio-sliders-container"></div>
-
-        <div class="description text-center mx-auto mt-5 pb-3">
-          <p>
-            Может ли созданный человеком дизайн общаться с человеческим
-            сознанием? После того как появилась сфера дизайна, люди начали
-            верить и стали думать иначе, что между творчеством и людьми
-            существует более глубокая духовная связь.
-          </p>
-          <p>
-            Представьте каким был дизайн 5 или 10 лет назад, только сравнив
-            на сегодняшний день можно понять что человечество очень быстро
-            эволюционировало, и так можно понять что дело не в красоте,
-            а в удобном, понятном и приятным на глаз дизайне.
-          </p>
-
-          <button
-            class="
-              border-0
-              rounded-pill
-              px-4
-              py-2
-              text-light
-              mt-3
-              btn-contact-me
-            "
-          >
-            Связатся со мной
-          </button>
+          </a>
         </div>
       </section>
 
@@ -293,15 +300,15 @@
         <!-- Reviews -->
         <div id="reviews" class="max-w overSiteBg">
           <div class="heading">
-            <h2 class="text-center">Отзывы обо мне</h2>
+            <h2 class="text-center" lang-key="reviewsHeading">Отзывы обо мне</h2>
           </div>
 
           <div class="cardOfReviews d-flex justify-content-between my-4"></div>
 
           <div class="description text-center mx-auto">
-            <p>
+            <p lang-key="reviewsDescrip">
               Эта категория пуста, так как у меня еще нету отзывов обо мне.
-              Надеюсь на то что за ближайшее время заполню эту категорию
+              Надеюсь на то что за ближайшее время заполню эту категорию,
             </p>
           </div>
         </div>
@@ -309,7 +316,7 @@
         <!-- Contacts -->
         <div id="contacts" class="max-w overSiteBg">
           <div class="heading">
-            <h2 class="text-center">Контакты</h2>
+            <h2 class="text-center" lang-key="navContacts">Контакты</h2>
           </div>
 
           <div class="contact-form row justify-content-between">
@@ -319,6 +326,7 @@
                 name="name"
                 id="name"
                 placeholder="Имя"
+                placeholder-lang-key="inputName"
                 class="my-1 p-2 border-0"
                 required
               />
@@ -336,6 +344,7 @@
                 cols="30"
                 rows="4"
                 placeholder="Чем могу помочь"
+                placeholder-lang-key="textareaHowHalp"
                 class="my-1 p-2 border-0"
                 required
               ></textarea>
@@ -351,6 +360,7 @@
                     btn-contact-me
                     submit-form
                   "
+                  lang-key="submitForm"
                 >
                   Отправить
                 </button>
@@ -359,11 +369,11 @@
 
             <div class="dop-info col-md-5 my-4">
               <div class="name">
-                <p class="m-0 text-secondary">Мое имя</p>
-                <h5>Хусан</h5>
+                <p class="m-0 text-secondary" lang-key="formMyName">Мое имя</p>
+                <h5 lang-key="formName">Хусан</h5>
               </div>
               <div class="tel mt-3">
-                <p class="m-0 text-secondary">Мой номер</p>
+                <p class="m-0 text-secondary" lang-key="formNum">Мой номер</p>
                 <h5>
                   <a
                     href="tel:+996700594283"
@@ -383,7 +393,7 @@
                 </h5>
               </div>
               <div class="soc-net position-relative">
-                <p class="mb-1 text-secondary">Или свяжитесь через</p>
+                <p class="mb-1 text-secondary" lang-key="orContactVia">Или свяжитесь через</p>
 
                 <div id="socNetIcons" class="d-flex slide-overflow"></div>
               </div>
@@ -395,40 +405,45 @@
 
     <!-- Footer -->
     <footer class="py-4">
-      <div class="max-w overSiteBg row justify-content-between align-items-center">
-
+      <div
+        class="max-w overSiteBg row justify-content-between align-items-center"
+      >
         <!-- Social -->
-        <div class="footer-social col-md-3  my-3">
-          <p class="m-0 text-secondary">Следить за мной</p>
+        <div class="footer-social col-md-3 my-3">
+          <p class="m-0 text-secondary" lang-key="FollowMe">Следить за мной</p>
           <div id="socNetIcons" class="d-flex flex-wrap"></div>
         </div>
 
         <div class="navigation text-light col-md-6 text-center my-3">
           <div class="avatar">
-            <img class="rounded-circle mb-2" src="./assets/img/avatar.jpg" alt="Alimovs avatar">
-            <h4>Хусан Алимов</h4>
+            <img
+              class="rounded-circle mb-2"
+              src="./assets/img/avatar.jpg"
+              alt="Alimovs avatar"
+            />
+            <h4 lang-key="authorName">Хусан Алимов</h4>
           </div>
 
           <!-- Navigation -->
           <nav>
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <a href="#about-me" class="nav-link">О себе</a>
+                <a href="#about-me" class="nav-link" lang-key="navAboutMe">О себе</a>
               </li>
               <li class="nav-item">
-                <a href="#my-services" class="nav-link">Услуги</a>
+                <a href="#my-services" class="nav-link" lang-key="navServices">Услуги</a>
               </li>
               <li class="nav-item">
-                <a href="#my-skills" class="nav-link">Навыки</a>
+                <a href="#my-skills" class="nav-link" lang-key="navSkills">Навыки</a>
               </li>
               <li class="nav-item">
-                <a href="#portfolio" class="nav-link">Портфолио</a>
+                <a href="#portfolio" class="nav-link" lang-key="navPortfolio">Портфолио</a>
               </li>
               <li class="nav-item">
-                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#reviews" class="nav-link" lang-key="navTestimonials">Отзывы</a>
               </li>
               <li class="nav-item">
-                <a href="#contacts" class="nav-link">Контакты</a>
+                <a href="#contacts" class="nav-link" lang-key="navContacts">Контакты</a>
               </li>
             </ul>
           </nav>

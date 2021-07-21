@@ -3,6 +3,7 @@ import { addElem, elem, elems } from "../utils.js";
 const portfolioObj = [
   {
     headline: "Графический дизайн",
+    langAttr: 'graphDesign',
     items: [
       {
         name: "Shop-now",
@@ -44,6 +45,7 @@ const portfolioObj = [
   },
   {
     headline: "Веб-дизайн",
+    langAttr: 'portfolioWebDesign',
     items: [
       {
         name: "Alimovs-shop",
@@ -91,7 +93,7 @@ portfolioObj.map((part) => {
   const portfolioPart = addElem(slidersContainer, "div", [
     ["className", "portfolio-part text-center"],
     ["innerHTML", `
-    <h4 class="my-5">${part.headline}</h4>
+    <h4 class="my-5" lang-key="${part.langAttr}">${part.headline}</h4>
 		`],
   ]);
   

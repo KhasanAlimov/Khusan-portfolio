@@ -4,6 +4,7 @@ const servicesObject = [
   [
     {
       headline: "Брендинг",
+      langAttr: ['branding', 'brandTxt'],
       text: "Разработка фирменного стиля и отдельных его элементов (логотип, корпоративные цвета, бланки, визитки, оформление транспорта, одежды сотрудников, торговых точек и т.д.).",
       img: {
         name: "Branding.jpg",
@@ -12,6 +13,7 @@ const servicesObject = [
     },
     {
       headline: "Разработка упаковки",
+      langAttr: ['packagDev', 'packagDevTxt'],
       text: "Создание дизайна упаковки для различных товаров.",
       img: {
         name: "Packaging-development.jpg",
@@ -20,6 +22,7 @@ const servicesObject = [
     },
     {
       headline: "Полиграфия",
+      langAttr: ['polygraphy', 'polygraphyTxt'],
       text: "Верстка макетов журналов и книг. Разработка дизайна буклетов, брошюр, листовок, афиш, календарей, сувенирной продукции.",
       img: {
         name: "Polygraphy.jpg",
@@ -28,6 +31,7 @@ const servicesObject = [
     },
     {
       headline: "Наружная реклама",
+      langAttr: ['outAdd', 'outAddTxt'],
       text: "Дизайн баннеров, стендов, вывесок.",
       img: {
         name: "Outdoor-advertising.jpg",
@@ -36,6 +40,7 @@ const servicesObject = [
     },
     {
       headline: "Дизайн пространства",
+      langAttr: ['spaceDesign', 'spaceDesignTxt'],
       text: "Разработка знаков, указателей, табличек, схем в аэропортах, метро, торговых центрах и других объектах.",
       img: {
         name: "Space-design.jpg",
@@ -44,6 +49,7 @@ const servicesObject = [
     },
     {
       headline: "Веб",
+      langAttr: ['web', 'webTxt'],
       text: "Дизайн баннеров, оформление социальных сетей, создание иконок, инфографики.",
       img: {
         name: "Web.jpg",
@@ -54,6 +60,7 @@ const servicesObject = [
   [
     {
       headline: "Макет посадочной страницы",
+      langAttr: ['landPageLayout', 'landPageLayoutTxt'],
       text: "Создаю аккуратную посадочную страницу, которая выглядит профессионально и не раздражает взгляд.",
       img: {
         name: "Landing-page-layout.jpg",
@@ -62,6 +69,7 @@ const servicesObject = [
     },
     {
       headline: "Макет сайта для компании",
+      langAttr: ['siteLayoutCompany', 'siteLayoutCompanyTxt'],
       text: "Продуманный дизайн корпоративного сайта поможет выгодно подать клиентам ваши преимущества, продемонстрирует солидность, повысит имидж.",
       img: {
         name: "Website-layout-for-the-company.jpg",
@@ -70,6 +78,7 @@ const servicesObject = [
     },
     {
       headline: "Макет интернет магазинов",
+      langAttr: ['onlineStoreLayout', 'onlineStoreLayoutTxt'],
       text: "Создание собственного интернет магазина – шаг к масштабированию компании и продаже товаров не только локально в городе или регионе, но и по всему миру.",
       img: {
         name: "Online-store-layout.jpg",
@@ -78,6 +87,7 @@ const servicesObject = [
     },
     {
       headline: "Интерфейсы для интернет-сервисов и приложений",
+      langAttr: ['interfaceServ', 'interfaceServTxt'],
       text: "Цифровая стратегия, поиск решения (UX) и разработка UI.",
       img: {
         name: "Interfaces-for-Internet-services-and-applications.jpg",
@@ -86,6 +96,7 @@ const servicesObject = [
     },
     {
       headline: "Шаблоны для email-рассылок",
+      langAttr: ['emailTemplates', 'emailTemplatesTxt'],
       text: "Профессиональные шаблон, удобный конструктор писем, превосходная доставляемость и автоматизация.",
       img: {
         name: "Email-templates.jpg",
@@ -94,6 +105,7 @@ const servicesObject = [
     },
     {
       headline: "Верстка",
+      langAttr: ['layout', 'layoutTxt'],
       text: "Адаптивный дизайн макетов веб-страниц для дальнейшей обработки и функционирования при помощи языковых разметок.",
       img: {
         name: "Layout.jpg",
@@ -124,8 +136,8 @@ servicesObject.map((item) => {
       [
         "innerHTML",
         `
-				<h5 class="headline">${serv.headline}</h5>
-				<p class="m-0">${serv.text}</p>
+				<h5 class="headline" lang-key="${serv.langAttr[0]}">${serv.headline}</h5>
+				<p class="m-0" lang-key="${serv.langAttr[1]}">${serv.text}</p>
 				<div class="overlay position-absolute"></div>
 			`,
       ],
