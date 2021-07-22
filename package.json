@@ -2,10 +2,12 @@
   "name": "alimov-khusan-portfolio",
   "version": "1.0.0",
   "description": "Web site about Khusan Alimov",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "dev": "webpack serve --open --config webpack.devs.conf.js",
-    "build": "webpack --config webpack.build.conf.js"
+    "build": "webpack --config webpack.build.conf.js",
+    "ndmon": "nodemon index"
   },
   "browserslist": [
     "> 1%",
@@ -25,6 +27,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.0",
+    "nodemon": "^2.0.7",
     "node-sass": "^6.0.0",
     "path": "^0.12.7",
     "postcss": "^8.3.0",
@@ -38,6 +41,10 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.1",
-    "bootstrap-icons": "^1.5.0"
+    "bootstrap-icons": "^1.5.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.3",
+    "serve-favicon": "^2.5.0"
   }
 }

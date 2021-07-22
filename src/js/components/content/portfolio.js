@@ -111,7 +111,7 @@ portfolioObj.map((part) => {
 			['style.background', item.color],
 			['innerHTML', `
         <a class="position-absolute" href="assets/img/portfolio/maxSizeImg/${item.link}" target="_blank">
-          <img src="./assets/img/portfolio/plus-circle.svg" alt="circle plus svg"/>
+          <img src="./assets/img/portfolio/plus-circle.svg" loading="lazy" alt="circle plus svg"/>
         </a>
         <img class="mw-100 mh-100" src="./assets/img/portfolio/${item.img}" alt="${item.name}"/>
 			`]

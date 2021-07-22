@@ -84,7 +84,7 @@ skilsObj.map(item => {
 			['className', 'd-flex justify-content-between my-3 align-items-center'],
 			['innerHTML', `
 				<div class="img">
-					<img src="assets/icons/${skill.Icon}" alt="${skill.Name}" class="w-100" />
+					<img src="assets/icons/${skill.Icon}" loading="lazy" alt="${skill.Name}" class="w-100" />
 				</div>
 				<div class="col-10">
 					<p class="m-0">${skill.Name}</p>
